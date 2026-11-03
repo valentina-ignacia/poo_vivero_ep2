@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="cl.duoc.vivero.controller.MainController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cl.duoc.vivero.controller.MainController">
+   <children>
+      <HBox prefHeight="65.0" prefWidth="750.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="66.0" prefWidth="333.0" text="Vivero Hojas del Sur">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="75.0" prefWidth="418.0" text="Alerta" textAlignment="CENTER" textFill="#ee0000" textOverrun="CENTER_ELLIPSIS" />
+         </children></HBox>
+      <VBox layoutY="65.0" prefHeight="434.0" prefWidth="215.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="110.0" text="Tipo de Planta">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <ChoiceBox prefWidth="150.0">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <Label layoutX="20.0" layoutY="10.0" prefHeight="17.0" prefWidth="110.0" text="Nombre">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin></TextField>
+            <Label layoutX="20.0" layoutY="52.0" prefHeight="17.0" prefWidth="110.0" text="Altura">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField layoutX="20.0" layoutY="69.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label layoutX="20.0" layoutY="94.0" prefHeight="17.0" prefWidth="110.0" text="Cantidad">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField layoutX="20.0" layoutY="111.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </TextField>
+         </children></VBox>
+      <VBox layoutX="301.0" layoutY="65.0" prefHeight="434.0" prefWidth="449.0" />
+   </children>
 </AnchorPane>
