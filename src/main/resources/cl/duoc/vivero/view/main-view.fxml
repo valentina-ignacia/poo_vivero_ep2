@@ -16,7 +16,7 @@
             </Label>
             <Label alignment="CENTER" prefHeight="75.0" prefWidth="418.0" text="Alerta" textAlignment="CENTER" textFill="#ee0000" textOverrun="CENTER_ELLIPSIS" />
          </children></HBox>
-      <VBox layoutY="65.0" prefHeight="434.0" prefWidth="215.0">
+      <VBox layoutY="65.0" prefHeight="434.0" prefWidth="241.0">
          <children>
             <Label prefHeight="17.0" prefWidth="110.0" text="Tipo de Planta">
                <VBox.margin>
@@ -57,7 +57,76 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </TextField>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Separator>
+            <Label prefHeight="20.0" prefWidth="194.0" text="Planta de Interior" underline="true">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="136.0" prefHeight="17.0" prefWidth="140.0" text="Volúmen de maceta (L)">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin></Label>
+            <TextField layoutX="20.0" layoutY="153.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label layoutX="20.0" layoutY="208.0" prefHeight="20.0" prefWidth="194.0" text="Planta de Exterior" underline="true">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="20.0" layoutY="228.0" prefHeight="17.0" prefWidth="140.0" text="Especie">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField layoutX="20.0" layoutY="245.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </TextField>
+            <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="126.0" text="Resiste las heladas">
+               <VBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </VBox.margin>
+            </CheckBox>
+            <CheckBox layoutX="20.0" layoutY="362.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="142.0" text="Listo para despacho">
+               <VBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </VBox.margin>
+            </CheckBox>
+            <HBox fillHeight="false" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" text="Guardar">
+                     <HBox.margin>
+                        <Insets left="40.0" top="18.0" />
+                     </HBox.margin></Button>
+                  <Button alignment="CENTER" cancelButton="true" contentDisplay="CENTER" mnemonicParsing="false" text="Limpiar">
+                     <HBox.margin>
+                        <Insets left="40.0" right="40.0" top="18.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
          </children></VBox>
-      <VBox layoutX="301.0" layoutY="65.0" prefHeight="434.0" prefWidth="449.0" />
+      <VBox layoutX="242.0" layoutY="65.0" prefHeight="434.0" prefWidth="508.0" />
    </children>
 </AnchorPane>
