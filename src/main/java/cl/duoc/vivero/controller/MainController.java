@@ -38,6 +38,11 @@ public class MainController {
         }
 
         @FXML
+        public void onSeleccionarTipo() {
+
+        }
+
+        @FXML
         public void onGuardar() {}
 
         @FXML
