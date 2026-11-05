@@ -14,7 +14,7 @@
                   <Font name="Arial Bold" size="24.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="75.0" prefWidth="418.0" text="Alerta" textAlignment="CENTER" textFill="#ee0000" textOverrun="CENTER_ELLIPSIS" />
+            <Label fx:id="alertLabel" alignment="CENTER" prefHeight="75.0" prefWidth="418.0" text="Alerta" textAlignment="CENTER" textFill="#ee0000" textOverrun="CENTER_ELLIPSIS" visible="false" />
          </children></HBox>
       <VBox layoutY="65.0" prefHeight="434.0" prefWidth="241.0">
          <children>
@@ -23,7 +23,7 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </Label>
-            <ChoiceBox prefWidth="150.0">
+            <ChoiceBox fx:id="tipoChoice" prefWidth="150.0">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -33,7 +33,7 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </Label>
-            <TextField maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0" VBox.vgrow="ALWAYS">
+            <TextField fx:id="nombreText" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin></TextField>
@@ -42,7 +42,7 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </Label>
-            <TextField layoutX="20.0" layoutY="69.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
+            <TextField fx:id="alturaText" layoutX="20.0" layoutY="69.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -52,7 +52,7 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </Label>
-            <TextField layoutX="20.0" layoutY="111.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
+            <TextField fx:id="cantidadText" layoutX="20.0" layoutY="111.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -77,7 +77,7 @@
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin></Label>
-            <TextField layoutX="20.0" layoutY="153.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
+            <TextField fx:id="volumenText" layoutX="20.0" layoutY="153.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -98,28 +98,28 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </Label>
-            <TextField layoutX="20.0" layoutY="245.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
+            <TextField fx:id="especieText" layoutX="20.0" layoutY="245.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
             </TextField>
-            <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="126.0" text="Resiste las heladas">
+            <CheckBox fx:id="resistenteCheck" mnemonicParsing="false" prefHeight="17.0" prefWidth="126.0" text="Resiste las heladas">
                <VBox.margin>
                   <Insets left="10.0" top="5.0" />
                </VBox.margin>
             </CheckBox>
-            <CheckBox layoutX="20.0" layoutY="362.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="142.0" text="Listo para despacho">
+            <CheckBox fx:id="disponibleCheck" layoutX="20.0" layoutY="362.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="142.0" text="Listo para despacho">
                <VBox.margin>
                   <Insets left="10.0" top="5.0" />
                </VBox.margin>
             </CheckBox>
             <HBox fillHeight="false" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" text="Guardar">
+                  <Button fx:id="guardarButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#onGuardar" text="Guardar">
                      <HBox.margin>
                         <Insets left="40.0" top="18.0" />
                      </HBox.margin></Button>
-                  <Button alignment="CENTER" cancelButton="true" contentDisplay="CENTER" mnemonicParsing="false" text="Limpiar">
+                  <Button fx:id="limpiarButton" alignment="CENTER" cancelButton="true" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onLimpiar" text="Limpiar">
                      <HBox.margin>
                         <Insets left="40.0" right="40.0" top="18.0" />
                      </HBox.margin>
