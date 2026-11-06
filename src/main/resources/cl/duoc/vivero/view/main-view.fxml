@@ -7,134 +7,72 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cl.duoc.vivero.controller.MainController">
    <children>
-      <HBox prefHeight="62.0" prefWidth="750.0">
+      <HBox prefHeight="68.0" prefWidth="750.0">
          <children>
-            <Label prefHeight="66.0" prefWidth="333.0" text="Vivero Hojas del Sur">
+            <Label alignment="CENTER" prefHeight="69.0" prefWidth="333.0" text="Vivero Hojas del Sur">
                <font>
                   <Font name="Arial Bold" size="24.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </Label>
-            <Label fx:id="alertLabel" alignment="CENTER" prefHeight="75.0" prefWidth="418.0" text="Alerta" textAlignment="CENTER" textFill="#ee0000" textOverrun="CENTER_ELLIPSIS" visible="false" />
+               </font></Label>
+            <Label fx:id="alertaLabel" layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="420.0" text="Alerta" textAlignment="CENTER" textFill="RED" visible="false" />
          </children></HBox>
-      <VBox layoutY="68.0" prefHeight="431.0" prefWidth="241.0">
+      <VBox layoutY="75.0" prefHeight="424.0" prefWidth="252.0">
          <children>
-            <Label prefHeight="17.0" prefWidth="110.0" text="Tipo de Planta">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </Label>
-            <ChoiceBox fx:id="tipoChoice" onAction="#onSeleccionarTipo" prefWidth="150.0">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </ChoiceBox>
-            <Label layoutX="20.0" layoutY="10.0" prefHeight="17.0" prefWidth="110.0" text="Nombre">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </Label>
-            <TextField fx:id="nombreText" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0" VBox.vgrow="ALWAYS">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin></TextField>
-            <Label layoutX="20.0" layoutY="52.0" prefHeight="17.0" prefWidth="110.0" text="Altura">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </Label>
-            <TextField fx:id="alturaText" layoutX="20.0" layoutY="69.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </TextField>
-            <Label layoutX="20.0" layoutY="94.0" prefHeight="17.0" prefWidth="110.0" text="Cantidad">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </Label>
-            <TextField fx:id="cantidadText" layoutX="20.0" layoutY="111.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </TextField>
-            <Separator prefWidth="200.0">
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Separator>
-            <Label prefHeight="20.0" prefWidth="194.0" text="Planta de Interior" underline="true">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <VBox.margin>
-                  <Insets left="10.0" top="5.0" />
-               </VBox.margin>
+            <Label prefHeight="17.0" prefWidth="249.0" text="Tipo de Planta" />
+            <ChoiceBox fx:id="tipoChoice" onAction="#onSeleccionarTipo" prefWidth="150.0" />
+            <Label layoutX="20.0" layoutY="20.0" prefHeight="17.0" prefWidth="249.0" text="Nombre" />
+            <TextField fx:id="nombreText" />
+            <Label layoutX="20.0" layoutY="62.0" prefHeight="17.0" prefWidth="249.0" text="Altura" />
+            <TextField fx:id="alturaText" layoutX="20.0" layoutY="79.0" />
+            <Label layoutX="20.0" layoutY="104.0" prefHeight="17.0" prefWidth="249.0" text="Cantidad" />
+            <TextField fx:id="cantidadText" layoutX="20.0" layoutY="121.0" />
+            <Label prefHeight="17.0" prefWidth="231.0" text="Plantas de Interior" textAlignment="CENTER" underline="true">
                <font>
-                  <Font size="14.0" />
+                  <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="20.0" layoutY="136.0" prefHeight="17.0" prefWidth="140.0" text="Volúmen de maceta (L)">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin></Label>
-            <TextField fx:id="volumenText" layoutX="20.0" layoutY="153.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </TextField>
-            <Separator prefWidth="200.0">
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Separator>
-            <Label layoutX="20.0" layoutY="208.0" prefHeight="20.0" prefWidth="194.0" text="Planta de Exterior" underline="true">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
+            <Label layoutX="20.0" layoutY="146.0" prefHeight="17.0" prefWidth="249.0" text="Volumen de Maceta (L)" />
+            <TextField fx:id="volumenText" layoutX="20.0" layoutY="163.0" />
+            <Label layoutX="20.0" layoutY="188.0" prefHeight="17.0" prefWidth="231.0" text="Plantas de Exterior" textAlignment="CENTER" underline="true">
                <font>
-                  <Font size="14.0" />
+                  <Font size="15.0" />
                </font>
-               <VBox.margin>
-                  <Insets left="10.0" top="5.0" />
-               </VBox.margin>
             </Label>
-            <Label layoutX="20.0" layoutY="228.0" prefHeight="17.0" prefWidth="140.0" text="Especie">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </Label>
-            <TextField fx:id="especieText" layoutX="20.0" layoutY="245.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="195.0">
-               <VBox.margin>
-                  <Insets left="10.0" />
-               </VBox.margin>
-            </TextField>
-            <CheckBox fx:id="resistenteCheck" mnemonicParsing="false" prefHeight="17.0" prefWidth="126.0" text="Resiste las heladas">
-               <VBox.margin>
-                  <Insets left="10.0" top="5.0" />
-               </VBox.margin>
-            </CheckBox>
-            <CheckBox fx:id="disponibleCheck" layoutX="20.0" layoutY="362.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="142.0" text="Listo para despacho">
-               <VBox.margin>
-                  <Insets left="10.0" top="5.0" />
-               </VBox.margin>
-            </CheckBox>
-            <HBox fillHeight="false" prefHeight="80.0" prefWidth="241.0">
+            <Label layoutX="20.0" layoutY="209.0" prefHeight="17.0" prefWidth="249.0" text="Especie" />
+            <TextField fx:id="especieText" layoutX="20.0" layoutY="226.0" />
+            <CheckBox fx:id="resistenteCheck" mnemonicParsing="false" prefHeight="17.0" prefWidth="231.0" text="Resiste las heladas" />
+            <CheckBox fx:id="disponibleCheck" layoutX="20.0" layoutY="314.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="231.0" text="Lista para despacho" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="guardarButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#onGuardar" text="Guardar">
-                     <HBox.margin>
-                        <Insets left="40.0" top="20.0" />
-                     </HBox.margin></Button>
-                  <Button fx:id="limpiarButton" alignment="CENTER" cancelButton="true" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onLimpiar" text="Limpiar">
-                     <HBox.margin>
-                        <Insets left="40.0" right="40.0" top="20.0" />
-                     </HBox.margin>
-                  </Button>
+                  <Button fx:id="guardarButton" defaultButton="true" mnemonicParsing="false" onAction="#onGuardar" prefHeight="25.0" prefWidth="121.0" text="Guardar" />
+                  <Button fx:id="limpiarButtton" cancelButton="true" mnemonicParsing="false" onAction="#onLimpiar" prefHeight="25.0" prefWidth="116.0" text="Limpiar" />
                </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
             </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></VBox>
+      <VBox layoutX="252.0" layoutY="75.0" prefHeight="424.0" prefWidth="496.0">
+         <children>
+            <TableView fx:id="plantaTableView" prefHeight="317.0" prefWidth="476.0">
+               <columns>
+                  <TableColumn fx:id="tipoColumn" prefWidth="75.0" text="Tipo" />
+                  <TableColumn fx:id="nombreColumn" prefWidth="75.0" text="Nombre" />
+                  <TableColumn fx:id="alturaColumn" prefWidth="75.0" text="Altura (cm)" />
+                  <TableColumn fx:id="cantidadColumn" prefWidth="75.0" text="Cantidad" />
+                  <TableColumn fx:id="precioColumn" prefWidth="75.0" text="Precio" />
+               </columns>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </TableView>
+            <Button fx:id="eliminarButton" mnemonicParsing="false" onAction="#onEliminar" prefHeight="25.0" prefWidth="198.0" text="Eliminar">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </Button>
          </children></VBox>
-      <VBox layoutX="242.0" layoutY="68.0" prefHeight="431.0" prefWidth="508.0" />
    </children>
 </AnchorPane>

@@ -3,6 +3,7 @@ module cl.duoc.vivero {
     requires javafx.graphics;
     requires javafx.controls;
     requires com.google.gson;
+    requires java.desktop;
 
     opens cl.duoc.vivero.model to com.google.gson;
     opens cl.duoc.vivero.controller to javafx.fxml;
