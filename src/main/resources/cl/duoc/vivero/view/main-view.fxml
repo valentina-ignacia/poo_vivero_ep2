@@ -7,23 +7,26 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cl.duoc.vivero.controller.MainController">
    <children>
-      <HBox prefHeight="65.0" prefWidth="750.0">
+      <HBox prefHeight="62.0" prefWidth="750.0">
          <children>
-            <Label alignment="CENTER" prefHeight="66.0" prefWidth="333.0" text="Vivero Hojas del Sur">
+            <Label prefHeight="66.0" prefWidth="333.0" text="Vivero Hojas del Sur">
                <font>
                   <Font name="Arial Bold" size="24.0" />
                </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
             </Label>
             <Label fx:id="alertLabel" alignment="CENTER" prefHeight="75.0" prefWidth="418.0" text="Alerta" textAlignment="CENTER" textFill="#ee0000" textOverrun="CENTER_ELLIPSIS" visible="false" />
          </children></HBox>
-      <VBox layoutY="65.0" prefHeight="434.0" prefWidth="241.0">
+      <VBox layoutY="68.0" prefHeight="431.0" prefWidth="241.0">
          <children>
             <Label prefHeight="17.0" prefWidth="110.0" text="Tipo de Planta">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
             </Label>
-            <ChoiceBox fx:id="tipoChoice" prefWidth="150.0">
+            <ChoiceBox fx:id="tipoChoice" onAction="#onSeleccionarTipo" prefWidth="150.0">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -59,7 +62,7 @@
             </TextField>
             <Separator prefWidth="200.0">
                <VBox.margin>
-                  <Insets top="15.0" />
+                  <Insets top="10.0" />
                </VBox.margin>
             </Separator>
             <Label prefHeight="20.0" prefWidth="194.0" text="Planta de Interior" underline="true">
@@ -67,7 +70,7 @@
                   <Insets />
                </opaqueInsets>
                <VBox.margin>
-                  <Insets left="10.0" top="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </VBox.margin>
                <font>
                   <Font size="14.0" />
@@ -82,6 +85,11 @@
                   <Insets left="10.0" />
                </VBox.margin>
             </TextField>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Separator>
             <Label layoutX="20.0" layoutY="208.0" prefHeight="20.0" prefWidth="194.0" text="Planta de Exterior" underline="true">
                <opaqueInsets>
                   <Insets />
@@ -90,7 +98,7 @@
                   <Font size="14.0" />
                </font>
                <VBox.margin>
-                  <Insets left="10.0" top="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </VBox.margin>
             </Label>
             <Label layoutX="20.0" layoutY="228.0" prefHeight="17.0" prefWidth="140.0" text="Especie">
@@ -113,20 +121,20 @@
                   <Insets left="10.0" top="5.0" />
                </VBox.margin>
             </CheckBox>
-            <HBox fillHeight="false" prefHeight="100.0" prefWidth="200.0">
+            <HBox fillHeight="false" prefHeight="80.0" prefWidth="241.0">
                <children>
                   <Button fx:id="guardarButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#onGuardar" text="Guardar">
                      <HBox.margin>
-                        <Insets left="40.0" top="18.0" />
+                        <Insets left="40.0" top="20.0" />
                      </HBox.margin></Button>
                   <Button fx:id="limpiarButton" alignment="CENTER" cancelButton="true" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onLimpiar" text="Limpiar">
                      <HBox.margin>
-                        <Insets left="40.0" right="40.0" top="18.0" />
+                        <Insets left="40.0" right="40.0" top="20.0" />
                      </HBox.margin>
                   </Button>
                </children>
             </HBox>
          </children></VBox>
-      <VBox layoutX="242.0" layoutY="65.0" prefHeight="434.0" prefWidth="508.0" />
+      <VBox layoutX="242.0" layoutY="68.0" prefHeight="431.0" prefWidth="508.0" />
    </children>
 </AnchorPane>
