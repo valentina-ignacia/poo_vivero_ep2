@@ -14,10 +14,11 @@ import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 
 public class MainController {
-    // Constantes para tipoChoice
+    // Constantes para tipoChoice | Uno por cada tipo de clase hija
     public final static String TIPO_EXTERIOR = "Planta Exterior";
     public final static String TIPO_INTERIOR = "Planta Interior";
-    // Constantes para alertaLabel
+
+    // Constantes para alertaLabel | Uno por cada alerta
     public final static String ALERTA_DEFAULT = "Sin Alerta";
     public final static String ALERTA_EXITO = "Registro Exitoso";
     public final static String ALERTA_NO_VALIDO = "Dato no valido";
@@ -28,6 +29,7 @@ public class MainController {
 
     // Espacio para alertas
     @FXML private Label alertaLabel;
+
     // Formulario de Planta
     // Campos Comunes
     @FXML private ChoiceBox<String> tipoChoice;
