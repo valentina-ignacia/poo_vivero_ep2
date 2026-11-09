@@ -76,9 +76,10 @@ public class MainController {
             this.disponibleCheck.setDisable(true);
 
             this.configurarTableView();
+
         try{
-            this.repository.cargar();
-            this.actualizarTableView();
+            this.repository.cargar(); // Le pide al repositorio que cargue los datos guardados
+            this.actualizarTableView(); //Actualiza la table de javafx
         }catch (PersistenciaException e){
             this.setAlertaLabelMensaje(e.getMessage(),"Error en carga inicial de datos");
         }
