@@ -19,7 +19,7 @@ public class MainController {
     // ================ ATRIBUTOS ================ //
 
     // Constantes para tipoChoice | Uno por cada tipo de clase hija
-    public final static String TIPO_EXTERIOR = "Planta Exterior";
+    public final static String TIPO_EXTERIOR = "Planta Exterior"; // Constantes | Nombre debe escribirse en mayus | public final static [tipo] [nombre] = [valor]
     public final static String TIPO_INTERIOR = "Planta Interior";
 
     // Constantes para alertaLabel | Uno por cada alerta
@@ -31,25 +31,25 @@ public class MainController {
     public final static String ALERTA_LECTURA = "Error al leer archivo";
     public final static String ALERTA_ESCRITURA = "Error al escribir archivo";
 
-    // Espacio para alertas
+    // Atributo para el mensaje de alerta
     @FXML private Label alertaLabel;
 
     // Formulario de Planta
         // Campos Comunes
-        @FXML private ChoiceBox<String> tipoChoice;
-        @FXML private TextField nombreText;
+        @FXML private ChoiceBox<String> tipoChoice; // ChoiceBox || Campo seleccionable
+        @FXML private TextField nombreText; // TextField || Campo para escribir texto
         @FXML private TextField alturaText;
         @FXML private TextField cantidadText;
         // Campos Planta Interior
         @FXML private TextField volumenText;
         // Campos Planta Exterior
         @FXML private TextField especieText;
-        @FXML private CheckBox resistenteCheck;
+        @FXML private CheckBox resistenteCheck; // CheckBox || Cuadro de check
         @FXML private CheckBox disponibleCheck;
 
-    // TableView || Se le asigna la variable  a cada columna de la tabla
-    @FXML private TableView<Planta> plantaTableView;
-    @FXML private TableColumn<Planta, String> tipoColumn;
+    // TableView || Se le asigna la variable a cada columna de la tabla
+    @FXML private TableView<Planta> plantaTableView; // TableView: Componente JavaFX que muestra información en una tabla
+    @FXML private TableColumn<Planta, String> tipoColumn; // <Planta, [tipo]>: Indica que se trabajará con elementos de la clase Planta y muentra valores del tipo indicado
     @FXML private TableColumn<Planta, String> nombreColumn;
     @FXML private TableColumn<Planta, Integer> alturaColumn;
     @FXML private TableColumn<Planta, Integer> cantidadColumn;
