@@ -47,7 +47,7 @@ public class MainController {
         @FXML private CheckBox resistenteCheck;
         @FXML private CheckBox disponibleCheck;
 
-    // TableView
+    // TableView || Se le asigna la variable  a cada columna de la tabla
     @FXML private TableView<Planta> plantaTableView;
     @FXML private TableColumn<Planta, String> tipoColumn;
     @FXML private TableColumn<Planta, String> nombreColumn;
@@ -75,7 +75,7 @@ public class MainController {
             this.resistenteCheck.setDisable(true);
             this.disponibleCheck.setDisable(true);
 
-            this.configurarTableView();
+            this.configurarTableView(); // se encarga de que cada dato aparezca en la columna correcta.
 
         try{
             this.repository.cargar(); // Le pide al repositorio que cargue los datos guardados
@@ -85,6 +85,7 @@ public class MainController {
         }
     }
 
+    // sirve para configurar las columnas de una tabla en JavaFX, indicándole qué información de cada planta debe mostrar.
     private void configurarTableView(){
         this.tipoColumn.setCellValueFactory(celda -> new ReadOnlyStringWrapper(celda.getValue().getTipo()));
         this.nombreColumn.setCellValueFactory(celda -> new ReadOnlyStringWrapper(celda.getValue().getNombre()));
@@ -96,8 +97,10 @@ public class MainController {
 
     private void actualizarTableView(){
         plantas.setAll(repository.listar());
-    }
+    } //Actualiza la table de javafx
 
+
+    // Hace que se muestre el formulario de cada tipo al seleccionar cada uno (y deshabilita el otro)
     @FXML
     public void onSeleccionarTipo(){
         String tipoPlanta = this.tipoChoice.getValue();
@@ -125,10 +128,11 @@ public class MainController {
                 this.especieText.setDisable(true);
                 this.resistenteCheck.setDisable(true);
                 this.disponibleCheck.setDisable(true);
-                this.setAlertaLabelMensaje(ALERTA_NO_SELECCIONADO,"Campo Seleccionar Tipo");
+
         }
     }
 
+    // Botón de guardar || Se juntan las variables de las clases y las variables de los elementos de la interfaz || Acá mismo se añaden las validaciones de las clases hijas
     @FXML
     public void onGuardar(){
         // Se crea variable para almacenamiento de datos
@@ -139,7 +143,7 @@ public class MainController {
             String nombre = this.nombreText.getText();
             int alturaCm = Integer.parseInt(this.alturaText.getText());
             int cantidad = Integer.parseInt(this.cantidadText.getText());
-            switch (tipo){
+            switch (tipo){ // Para hacer switch primero se asignan los tipos de un componente a una variable
                 case TIPO_INTERIOR:
                     double volumenMacetaLitros = Double.parseDouble(this.volumenText.getText());
                     if(volumenMacetaLitros <= 0.0){
@@ -180,6 +184,7 @@ public class MainController {
         }
     }
 
+    // Se usa para limpiar todos los campos a rellenar
     @FXML
     public void onLimpiar(){
         this.tipoChoice.setValue("");
@@ -193,6 +198,7 @@ public class MainController {
         this.setAlertaLabelMensaje(ALERTA_DEFAULT,"");
     }
 
+    // Esto asigna durante que caso de alerta, se debe mostrar el mensaje y en qué color
     private void setAlertaLabelMensaje(String tipo,String mensaje){
         if(mensaje.trim().isBlank()){
             mensaje = tipo;
@@ -220,6 +226,7 @@ public class MainController {
         this.alertaLabel.setText(mensaje);
     }
 
+    // Elimina un registro de la tabla
     @FXML
     public void onEliminar(){
         Planta seleccionada = this.plantaTableView.getSelectionModel().getSelectedItem();
