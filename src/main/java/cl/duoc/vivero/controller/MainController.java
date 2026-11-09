@@ -14,6 +14,10 @@ import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 
 public class MainController {
+
+
+    // ================ ATRIBUTOS ================ //
+
     // Constantes para tipoChoice | Uno por cada tipo de clase hija
     public final static String TIPO_EXTERIOR = "Planta Exterior";
     public final static String TIPO_INTERIOR = "Planta Interior";
@@ -31,17 +35,17 @@ public class MainController {
     @FXML private Label alertaLabel;
 
     // Formulario de Planta
-    // Campos Comunes
-    @FXML private ChoiceBox<String> tipoChoice;
-    @FXML private TextField nombreText;
-    @FXML private TextField alturaText;
-    @FXML private TextField cantidadText;
-    // Campos Planta Interior
-    @FXML private TextField volumenText;
-    // Campos Planta Exterior
-    @FXML private TextField especieText;
-    @FXML private CheckBox resistenteCheck;
-    @FXML private CheckBox disponibleCheck;
+        // Campos Comunes
+        @FXML private ChoiceBox<String> tipoChoice;
+        @FXML private TextField nombreText;
+        @FXML private TextField alturaText;
+        @FXML private TextField cantidadText;
+        // Campos Planta Interior
+        @FXML private TextField volumenText;
+        // Campos Planta Exterior
+        @FXML private TextField especieText;
+        @FXML private CheckBox resistenteCheck;
+        @FXML private CheckBox disponibleCheck;
 
     // TableView
     @FXML private TableView<Planta> plantaTableView;
@@ -55,19 +59,23 @@ public class MainController {
     private final PlantaRepository repository = new PlantaRepository();
     private final ObservableList<Planta> plantas = FXCollections.observableArrayList();
 
+    // ================ MÉTODOS ================ //
+
+    // Estado de las variables cuando se abre la app
     @FXML
     public void initialize() {
-        // Inicializando tipos de datos
+        // Se agregan las opciones al ChoiceBox
         this.tipoChoice.getItems().add(TIPO_INTERIOR);
         this.tipoChoice.getItems().add(TIPO_EXTERIOR);
         // Bloqueando campos no seleccionados
-        // Los campos Interiores
-        this.volumenText.setDisable(true);
-        // Campos Exteriores
-        this.especieText.setDisable(true);
-        this.resistenteCheck.setDisable(true);
-        this.disponibleCheck.setDisable(true);
-        this.configurarTableView();
+            // Los campos Interiores
+            this.volumenText.setDisable(true);
+            // Campos Exteriores
+            this.especieText.setDisable(true);
+            this.resistenteCheck.setDisable(true);
+            this.disponibleCheck.setDisable(true);
+
+            this.configurarTableView();
         try{
             this.repository.cargar();
             this.actualizarTableView();
