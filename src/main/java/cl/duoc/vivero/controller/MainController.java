@@ -53,6 +53,7 @@ public class MainController {
     @FXML private TableColumn<Planta, String> nombreColumn;
     @FXML private TableColumn<Planta, Integer> alturaColumn;
     @FXML private TableColumn<Planta, Integer> cantidadColumn;
+    @FXML private TableColumn<Planta, String> datosColumn;
     @FXML private TableColumn<Planta, String> precioColumn;
 
     // Implementar el repositorio en el controlador
@@ -91,6 +92,7 @@ public class MainController {
         this.nombreColumn.setCellValueFactory(celda -> new ReadOnlyStringWrapper(celda.getValue().getNombre()));
         this.alturaColumn.setCellValueFactory(celda -> new ReadOnlyObjectWrapper<>(celda.getValue().getAlturaCm()));
         this.cantidadColumn.setCellValueFactory(celda -> new ReadOnlyObjectWrapper<>(celda.getValue().getCantidad()));
+        this.datosColumn.setCellValueFactory(celda -> new ReadOnlyStringWrapper<>(celda.getValue().getDatos()));
         this.precioColumn.setCellValueFactory(celda -> new ReadOnlyStringWrapper(Planta.pesos(celda.getValue().calcularPrecio())));
         this.plantaTableView.setItems(this.plantas);
     }
