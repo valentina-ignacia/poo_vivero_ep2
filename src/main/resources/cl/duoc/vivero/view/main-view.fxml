@@ -62,6 +62,7 @@
                   <TableColumn fx:id="nombreColumn" prefWidth="75.0" text="Nombre" />
                   <TableColumn fx:id="alturaColumn" prefWidth="75.0" text="Altura (cm)" />
                   <TableColumn fx:id="cantidadColumn" prefWidth="75.0" text="Cantidad" />
+                  <TableColumn fx:id="datosColumn" prefWidth="75.0" text="Datos específicos" />
                   <TableColumn fx:id="precioColumn" prefWidth="75.0" text="Precio" />
                </columns>
                <VBox.margin>
