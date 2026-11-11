@@ -73,6 +73,8 @@ public abstract class Planta {
         return alturaCm;
     }
 
+    public abstract String getDatos();
+
     protected static int validarCantidad(int cantidad) {
         if (cantidad < CANTIDAD_MINIMA || cantidad > CANTIDAD_MAXIMA) {
             throw new IllegalArgumentException("La cantidad debe estar entre " + CANTIDAD_MINIMA + " y "
