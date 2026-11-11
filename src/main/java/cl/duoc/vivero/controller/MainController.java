@@ -92,7 +92,7 @@ public class MainController {
         this.nombreColumn.setCellValueFactory(celda -> new ReadOnlyStringWrapper(celda.getValue().getNombre()));
         this.alturaColumn.setCellValueFactory(celda -> new ReadOnlyObjectWrapper<>(celda.getValue().getAlturaCm()));
         this.cantidadColumn.setCellValueFactory(celda -> new ReadOnlyObjectWrapper<>(celda.getValue().getCantidad()));
-        this.datosColumn.setCellValueFactory(celda -> new ReadOnlyStringWrapper<>(celda.getValue().getDatos()));
+        this.datosColumn.setCellValueFactory(celda -> new ReadOnlyStringWrapper(celda.getValue().getDatos()));
         this.precioColumn.setCellValueFactory(celda -> new ReadOnlyStringWrapper(Planta.pesos(celda.getValue().calcularPrecio())));
         this.plantaTableView.setItems(this.plantas);
     }
@@ -158,6 +158,7 @@ public class MainController {
                     String especie = this.especieText.getText();
                     if(especie.isEmpty() || especie.trim().isBlank()){
                         this.setAlertaLabelMensaje(ALERTA_NO_VALIDO, "campo especie no puede estar vacia ni contener solo espacios");
+                        return;
                     }
                     boolean resistenteHeladas = this.resistenteCheck.isSelected();
                     boolean listaParaDespacho = this.disponibleCheck.isSelected();
