@@ -29,6 +29,10 @@ public class PlantaInterior extends Planta {
         this.volumenMacetaLitros = volumenMacetaLitros;
     }
 
+    public String getDatos() {
+        return "Maceta: "+getVolumenMacetaLitros()+" L";
+    }
+
     @Override
     public int calcularPrecio() {
         if (volumenMacetaLitros > LITROS_MACETA_GRANDE) {
