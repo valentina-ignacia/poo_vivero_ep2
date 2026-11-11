@@ -40,6 +40,10 @@ public class PlantaExterior extends Planta implements Despachable {
         this.resistenteHeladas = resistenteHeladas;
     }
 
+    public String getDatos() {
+        return "Especie: " +getEspecie()+ " | Heladas: " +(isResistenteHeladas() ? "Si" : "No")+" | Despacho: "+(estaListaParaDespacho() ? "Si" : "No");
+    }
+
     @Override
     public boolean estaListaParaDespacho() {
         return listaParaDespacho;
